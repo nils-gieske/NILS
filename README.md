@@ -268,14 +268,14 @@ No other format combines all six in one notation. JSON can't express causality. 
 
 |                              | JSON | YAML | TOON | RDF | NILS |
 | ---------------------------- | ---- | ---- | ---- | --- | ---- |
-| Token-efficient              | -    | -    | ✅    | -   | ✅    |
-| SPO (who, what, where, when) | -    | -    | -    | ✅   | ✅    |
-| Causality & conditions       | -    | -    | -    | -   | ✅    |
-| Temporal predicates          | -    | -    | -    | -   | ✅    |
-| Self-describing header       | -    | -    | -    | -   | ✅    |
-| No parser, no tooling        | -    | ✅    | -    | -   | ✅    |
-| Human & LLM readable         | -    | ✅    | ✅    | -   | ✅    |
-| SSOT & cross-references      | -    | -    | -    | -   | ✅    |
+| Token-efficient              | -    | -    | ✅    | -  | ✅   |
+| SPO (who, what, where, when) | -    | -    | -    | ✅  | ✅   |
+| Causality & conditions       | -    | -    | -    | -   | ✅   |
+| Temporal predicates          | -    | -    | -    | -   | ✅   |
+| Self-describing header       | -    | -    | -    | -   | ✅   |
+| No parser, no tooling        | -    | -    | -    | -   | ✅   |
+| Human & LLM readable         | ✅   | ✅   | ✅   | ✅  | ✅   |
+| SSOT & cross-references      | -    | -    | -    | ✅  | ✅   |
 
 
 ---

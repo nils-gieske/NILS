@@ -339,4 +339,4 @@ Every fork defines its own Full Header. Since every NILS file carries its header
 
 ---
 
-**MIT License · Created by [YOUR NAME], March 2026**
+**MIT License · Created by NILS GIESKE, March 2026**

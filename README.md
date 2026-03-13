@@ -15,7 +15,7 @@ Translate the following into the Normative Interchange Language Standard (NILS):
 [paste your source text here]
 ```
 
-That's it. No setup. No tooling. No dependencies. Works with GPT, Claude, Gemini, Llama, Mistral — today and in 10 years. To translate back to prose, simply ask the LLM to convert the NILS file into natural language.
+Works with GPT, Claude, Gemini, Llama, Mistral — today and in 10 years. To translate back to prose, simply ask the LLM to convert the NILS file into natural language.
 
 ---
 

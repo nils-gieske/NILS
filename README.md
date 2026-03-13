@@ -91,7 +91,8 @@ The probability of closure is assessed as low. If closure occurred, oil prices w
 **The same knowledge in NILS (~220 tokens)**
 
 ```
-NILSv0.1
+NILS_V0.1
+
 ===LEGEND===
 @ entity  # tag  ! key_fact  ~ approx  ^ source  > process
 . spo  : assign  , list  ; seq  | alt

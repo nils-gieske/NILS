@@ -1,0 +1,57 @@
+NILS_V0.1
+
+@strait_of_hormuz
+ =strait
+ connects:persian_gulf<->gulf_of_oman
+ #geopolitics #energy #chokepoint
+ geo:(26.567N,56.250E)
+ width:~39km
+ depth:60-90m
+ lanes:2x3km(each_direction)+3km_separation
+
+ borders:IR(north),OM(south),AE(south)
+ IR.controls:islands(hormuz,qeshm,larak)
+
+ traffic[2023]:
+  !ships.transit/d:~80
+  !oil.flows_through/d:21Mb(=20%global,33%seaborne)
+  LNG.flows_through/y:4tcf(=18%global)
+  global_share%:oil:20,lng:18,fertilizer:10,petrochemicals:8
+  trade.value/d:~$1.2B
+  exports.originate_from:SA,IR,IQ,KW,AE,QA
+  imports.go_to:CN,IN,JP,KR,EU
+  ^eia.gov,iea.org[2023]
+
+ geopolitics:
+  IR:
+   controls:north_shore
+   operates:naval_base@bandar_abbas
+   has:sea_mine_capability
+   recurs:closure_threat(strait_of_hormuz)[2012,2018,2022]
+  US:
+   operates:5th_fleet@bahrain
+   since:carrier_group_presence(permanent)[1995]
+   guarantees:free_passage(strait_of_hormuz)
+  IR<->US:primary_tension_axis
+
+  T[date,subject,action,object]:
+   2019,IR,attacked,tankers(gulf_of_oman)
+   2019,US,shot_down,IR_drone
+   2023,IRGC,seized,tanker(strait_of_hormuz)
+
+  {high_tension}->US,UK.escort:tankers(strait_of_hormuz)
+
+ bypass{if_closure}:
+  T[name,operator,capacity,destination,status]:
+   east_west_pipe,SA,5Mb/d,yanbu(red_sea),active
+   habshan_fujairah,AE,1.5Mb/d,fujairah,active
+   IPSA,IQ,1.65Mb/d,TR,inactive
+  =total_bypass:7Mb/d(=33%_of_hormuz_flow)
+  !bypass.is!=sufficient_for_full_closure
+
+ risk:
+  closure.probability:low
+  {closure}->oil_price.rises:+40-80%{within_1w}
+  {closure}->LNG_spot_price.rises:+200-300%
+  {closure_duration>3mo}->global_economy.enters:recession
+  mitigation.includes:strategic_reserves(US:~400Mb,CN:~500Mb),bypass_pipelines

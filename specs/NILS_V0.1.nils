@@ -1,0 +1,143 @@
+MIT License · Created by NILS GIESKE, March 2026
+
+
+================================================================================
+NILS_v0.5.nils
+================================================================================
+
+NILSv0.5
+===LEGEND===
+STRUCTURE:
+@ entity         : names a knowledge object (@panama_canal)
+# tag            : category label (#energy #trade)
+  indent(1space) : nesting level = parent-child hierarchy
+= def            : equals, is-a, total, definition
+_ join           : compound token (oil_price = single concept)
+
+OPERATORS:
+. spo            : subject.predicate separator (IR.controls:north_shore)
+: assign         : predicate:object binding (width:39km)
+, list           : AND enumeration (SA,IR,IQ)
+; seq            : THEN sequence (load;transit;unload)
+| alt            : OR alternative (suez|cape)
+-> cause         : leads to, results in (A->B)
+<-> mutual       : bidirectional relation (IR<->US)
+<- from          : originates from (effect<-cause)
+
+GROUPING:
+() group         : inline grouping (26.567N,56.250E)
+[] time          : temporal scope [2023] or [2018-2024]
+{} condition     : if-clause {if_x}->then_y
+
+MODIFIERS:
+! key_fact       : high-priority for retrieval
+? uncertain      : unverified or disputed
+~ approx         : estimated value (~39km)
+^ source         : attribution (^eia.gov[2023])
+!= negation      : does NOT have/is NOT
+
+PROCESS:
+> process        : sequential steps (1. 2. 3.)
+
+TABLES:
+T[] table        : compact table T[col1,col2]:rows follow indented
+
+REFERENCES:
+& ref            : cross-reference (&@entity.field)
+++ append        : incremental addition to existing entity
+-- remove        : incremental removal from existing entity
+
+QUANTIFIERS (optional, only when source supports it):
+Q:all            : virtually all (>95%)
+Q:above_avg      : more than typical
+Q:avg            : typical, normal range
+Q:below_avg      : less than typical
+Q:none           : virtually none (<5%)
+
+TEMPORAL PREDICATES:
+started          : beginning of state/action [year]
+ended            : end of state/action [year]
+during           : state active within period [range]
+since            : ongoing from point in time [year]
+until            : active up to point [year]
+recurs           : repeated occurrence [year,year,year]
+planned          : future intended action [year]
+(no temporal predicate = current state or timeless fact)
+===END_LEGEND===
+
+===FORMATS===
+SI_BASE: kg,m,s,A,K,mol,cd
+SI_PREFIX: p=1e-12,n=1e-9,µ=1e-6,m_=1e-3,k=1e3,M=1e6,G=1e9,T=1e12
+  m_=milli (underscore distinguishes from m=meter)
+
+MAGNITUDE: k=1e3,M=1e6,B=1e9,T=1e12
+  B=Billion(short_scale). Bytes use SI: kB,MB,GB,TB
+
+CURRENCY: ISO-4217
+  SYMBOL_PREFIX: $3.5B (symbol before number)
+  CODE_SUFFIX: 3.5B_CNY (code after, when symbol ambiguous e.g. ¥=JPY|CNY)
+  $=USD,€=EUR,£=GBP,¥=ambiguous(always_use_code)
+
+DOMAIN_UNITS:
+  ENERGY: b=barrel,Mb=1e6_barrel,Gb=1e9_barrel,boe=barrel_oil_equivalent
+  ENERGY: Wh,kWh,MWh,TWh,Btu,tcf=trillion_cubic_feet
+  MARINE: nmi=nautical_mile,kn=knot,dwt=deadweight_tonnage
+  AREA: m²,km²,ha
+  RATE: /s,/min,/h,/d,/w,/mo,/y (per unit time)
+  RATIO: %,‰,pp=percentage_point,x=multiplier(3x=three_times)
+  TIME: s,min,h,d,w,mo,y
+
+DATETIME: ISO-8601
+  yyyy-mm-dd (date), hh:mm:ss (time), yyyy-mm-dd_hh:mm:ss (combined)
+  [2023] (year), [2018-2024] (range), [2024-01..2024-06] (sub-year)
+  [-3y] (relative past), [+6mo] (relative future)
+
+GEO: decimal_degrees with compass suffix (26.567N,56.250E)
+  Always N/S and E/W. Source precision preserved.
+===END_FORMATS===
+
+===ABBR===
+GEO: ISO-3166-1-alpha-2
+  UPPERCASE 2-letter: DE=Germany,US=United_States,IR=Iran,CN=China,...
+  249 codes. No other namespace uses uppercase 2-letter.
+
+LANG: ISO-639-1
+  lowercase 2-letter: de=German,en=English,zh=Chinese,ar=Arabic,...
+  Case separates from GEO: DE=country, de=language.
+
+CURRENCY: ISO-4217
+  3-letter UPPERCASE: USD,EUR,JPY,GBP,CHF,CNY,...
+  No collision with 2-letter GEO.
+
+ORG: globally unambiguous only
+  UN,EU,NATO,OPEC,WHO,IMF,WTO,IAEA,ASEAN,AU,BRICS,
+  NASA,ESA,FIFA,IOC,WEF,OECD,APEC,MERCOSUR,ICC,ICJ
+  Rule: one dominant meaning globally. Others spell out.
+
+TECHNICAL: declared per-entity via _abbr()
+  _abbr(full_term=SHORT,full_term2=SHORT2)
+  Rule: only abbreviations LLMs know from training.
+  Rule: never invent novel abbreviations.
+  Rule: frequency wins — most common meaning gets abbreviation.
+
+NONE: anything not covered → spell out with underscores.
+===END_ABBR===
+
+===RULES===
+1.SPO: every statement = subject.predicate:object. Zero ambiguity.
+2.INHERIT: subject inherits from indent context. Predicate always explicit.
+3.AMBIGUITY_TEST: read each statement in isolation. One interpretation only.
+4.ONE_CONVENTION: one way to write each thing. No alternatives.
+5.PRECISION: source precision preserved. Never discard information.
+6.SYMBOLS: each symbol has exactly one meaning. No overloading.
+7.WORST_CASE: assume recipient has zero context. Always include header.
+8.NO_INVENT: never invent abbreviations. Only established ones.
+9.FREQUENCY: if two terms compete for abbreviation, most common wins.
+10.QUANTIFY_ONLY_IF_CONFIDENT: never fabricate quantifications.
+11.TEMPORAL_EXPLICIT: use temporal predicates. Never leave time ambiguous.
+12.NEGATION_EXPLICIT: use != when negation is informative.
+13.SSOT: in database mode, define entity once, reference everywhere via &@.
+14.TABLES: T[cols] for 3+ columns. Pair list for 2. Flat list for 1.
+===END_RULES===
+
+===END_HEADER===

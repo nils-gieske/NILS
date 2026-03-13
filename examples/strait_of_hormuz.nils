@@ -1,5 +1,24 @@
 NILS_V0.1
 
+===LEGEND===
+@ entity  # tag  ! key_fact  ~ approx  ^ source  > process
+. spo  : assign  , list  ; seq  | alt
+-> cause  <-> mutual  () group  [] time  {} condition
+= def  _ join  T[] table  != negation
+TEMPORAL: started,ended,since,recurs,planned
+===END_LEGEND===
+===FORMATS===
+SI: kg,m,s | ENERGY: Mb,tcf | RATE: /d,/y
+CURRENCY: ISO-4217,SYMBOL_PREFIX | MAGNITUDE: B=1e9
+GEO: decimal_deg(N/S,E/W)
+===END_FORMATS===
+===ABBR===
+GEO: ISO-3166-1-a2(UPPERCASE)
+ORG: IRGC=islamic_revolutionary_guard_corps
+_abbr(liquefied_natural_gas=LNG,million_barrels=Mb)
+===END_ABBR===
+===END_HEADER===
+
 @strait_of_hormuz
  =strait
  connects:persian_gulf<->gulf_of_oman

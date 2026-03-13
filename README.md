@@ -52,16 +52,16 @@ What JSON did for data and HTML did for the web, **NILS** does for knowledge.
 ## Where NILS fits
 
 
-|                                                  |              |                     |                  |                            |
-| ------------------------------------------------ | ------------ | ------------------- | ---------------- | -------------------------- |
-| **📥 RAW DATA**                                  |              |                     |                  |                            |
-| Emails                                           | PDFs         | Articles            | Meetings         | Reports · APIs · Databases |
-| **Any LLM transforms**                           |              |                     |                  |                            |
-| **↕️**                                           | **↕️**       | **↕️**              | **↕️**           | **↕️**                     |
-| **⚡ NILS** The knowledge layer all systems share |              |                     |                  |                            |
-| **↕️**                                           | **↕️**       | **↕️**              | **↕️**           | **↕️**                     |
-| **🔍 RAG**                                       | **🔄 MCP**   | **🧠 LLM Training** | **🗄️ Database** | **👁️ Human**              |
-| 10x per chunk                                    | fewer tokens | less noise          | SSOT versioned   | reads directly             |
+|                                                  |               |                     |                  |                            |
+| ------------------------------------------------ | ------------  | ------------------- | ---------------- | -------------------------- |
+| **📥 RAW DATA**                                  |               |                     |                  |                            |
+| Emails                                           | PDFs          | Articles            | Meetings         | Reports · APIs · Databases |
+| LLM transforms                                   | LLM transforms|LLM transforms       | LLM transforms   | LLM transforms             |
+| **↕️**                                           | **↕️**        | **↕️**              | **↕️**           | **↕️**                     |
+| **⚡ NILS**                                      | **⚡ NILS**   | **⚡ NILS**         | **⚡ NILS**      | **⚡ NILS**                |
+| **↕️**                                           | **↕️**        | **↕️**              | **↕️**           | **↕️**                     |
+| **🔍 RAG**                                       | **🔄 MCP**    | **🧠 LLM Training** | **🗄️ Database**  | **👁️ Human**               |
+| 10x per chunk                                    | fewer tokens  | less noise          | SSOT versioned   | reads directly             |
 
 
 **One format. Every use case. No translation between systems.**
